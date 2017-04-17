@@ -455,7 +455,7 @@ var structE = StructValue()
 structE.appending()
 print(structE.protocolProperty)
 
-// 扩展 扩展int类型，自增一倍
+// 扩展方法 扩展int类型，自增一倍
 extension Int : sampleProtocol{
     var protocolProperty: String{
         return "the number \(self)"
@@ -466,6 +466,15 @@ extension Int : sampleProtocol{
 }
 var intNum = 200
 intNum.appending()
+
+extension String {
+    var banana : String {
+        let shortName = String(characters.dropFirst())
+        return "\(self) \(self) you are bitch \(shortName)"
+    }
+}
+
+let bananaName = "Jimmy".banana
 
 
 
